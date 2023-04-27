@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import LoginScreen from './LoginScreen';
+import ChatApp from './ChatApp';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default function App() {
+    const [user, setUser] = useState("");
 
-export default App;
+    const handleLogin = (username, color) => {
+        setUser({ username, color });
+    };
+
+    return (
+        <div>
+            <header>Header</header>
+            {user ? (<ChatApp currentUser={user} />) : (<LoginScreen onLogin={handleLogin} />)}
+            <footer>Footer</footer>
+        </div>
+    )
+};
