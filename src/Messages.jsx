@@ -54,10 +54,10 @@ export default function Messages (props) {
     }, [room]);
     
     return (
-        <div>
-            <ul>
+        <div className="messages">
+            <ul className="messagesList">
                 {messages.map((message) => (
-                    <Message key={message.id} text={message.data} author={message.member.clientData.name}/>
+                    <Message key={message.id} text={message.data} author={message.member.clientData.name} time={message.timestamp}/>
                 ))}
             </ul>
         </div>

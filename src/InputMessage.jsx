@@ -14,15 +14,15 @@ export default function InputMessage ({onSubmit}) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="messageForm">
             <label> Message
-                <input
+                <input className="messageInput"
                     required
                     type="text"
                     value={text}
                     onChange={handleInputChange} />
             </label>
-            <button type="submit">Send</button>
+            <button className="messageButton" type="submit">Send</button>
         </form>
     )
 }

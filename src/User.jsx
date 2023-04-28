@@ -3,7 +3,7 @@ import React from "react"
 export default function User({ name, color }) {
 
     return (
-        <li>
+        <li className="user">
             {name}, {color}
         </li>
     )

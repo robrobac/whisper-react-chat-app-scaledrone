@@ -31,9 +31,9 @@ export default function Users(props) {
   console.log("Currently online Users:", users);
   
   return (
-    <div>
+    <div className="users">
         {currentUser.length > 0 && (
-            <ul>
+            <ul className="currentUser">
                 <User
                     key={currentUser[0].id}
                     name={currentUser[0].clientData.name}
@@ -41,7 +41,7 @@ export default function Users(props) {
                 />
             </ul>
         )}
-        <ul>
+        <ul className="usersList">
             {otherUsers.map((user) => (
                 <User
                     key={user.id}

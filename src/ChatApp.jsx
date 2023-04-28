@@ -30,7 +30,7 @@ export default function ChatApp({currentUser}) {
     console.log("New user created - Username:", currentUser.username, ", Color:", currentUser.color)
 
     return (
-        <div>
+        <div className='chatApp'>
             <Chat room={room} drone={drone}/>
             <Sidebar room={room} drone={drone}/>
         </div>

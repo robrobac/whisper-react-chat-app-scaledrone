@@ -6,7 +6,7 @@ export default function Sidebar (props) {
     const room = props.room;
     
     return (
-        <aside>
+        <aside className="sidebar">
             <Users room={room} drone={drone}/>
         </aside>
     )

@@ -19,10 +19,10 @@ export default function LoginScreen({ onLogin }) {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <main className='login'>
+            <form onSubmit={handleSubmit} className='loginForm'>
                 <label> Username:
-                    <input
+                    <input className='usernameInput'
                         required
                         type='text'
                         value={username}
@@ -30,14 +30,14 @@ export default function LoginScreen({ onLogin }) {
                     />
                 </label>
                 <label> Color:
-                    <input
+                    <input className='colorInput'
                         type='color'
                         value={color}
                         onChange={handleColorChange}
                     />
                 </label>
+                <button className="loginButton" type="submit">Send</button>
             </form>
-
-        </div>
+        </main>
     )
 };
