@@ -3,7 +3,7 @@ import React from "react"
 export default function Message({ id, text, author, time }) {
     const timestamp = time;
     const date = new Date(timestamp * 1000);
-    const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+    const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
 
     if (author === "notification") {
         return (
