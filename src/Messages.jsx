@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Message from "./Message";
+import './Messages.scss'
 
 export default function Messages (props) {
     const room = props.room;
+    const currentUserId = props.room.scaledrone.clientId;
     const [messages, setMessages] = useState([]);
     
     useEffect(() => {
@@ -57,7 +59,7 @@ export default function Messages (props) {
         <div className="messages">
             <ul className="messagesList">
                 {messages.map((message) => (
-                    <Message key={message.id} text={message.data} author={message.member.clientData.name} time={message.timestamp}/>
+                    <Message key={message.id} text={message.data} authorId={message.member.id} author={message.member.clientData.name} time={message.timestamp} currentUser={currentUserId} color={message.member.clientData.color}/>
                 ))}
             </ul>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import InputMessage from './InputMessage';
 import Messages from './Messages';
+import './Chat.scss'
 
 export default function Chat(props) {
     const drone = props.drone
@@ -15,7 +16,7 @@ export default function Chat(props) {
     }
 
     return (
-        <main>
+        <main className="chat">
         <Messages room={room} />
         <InputMessage onSubmit={handleSendMessage} />
         </main>

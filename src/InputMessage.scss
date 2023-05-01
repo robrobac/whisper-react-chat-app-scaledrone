@@ -1,0 +1,27 @@
+@import 'variables';
+
+.messageForm {
+    display: flex;
+    flex-direction: row;
+    max-width: 1500px;
+
+    .messageInput {
+        font-size: 1.5rem;
+        color: $color2;
+        height: 2rem;
+        width: 100%;
+        background-color: $color1;
+        border: none;
+    }
+
+    .messageButton {
+        cursor: pointer;
+        margin-left: 10px;
+        font-weight: 700;
+        background-color: $accentColor;
+        color: $color2;
+        width: 80px;
+        height: 2rem;
+        border: none;
+    }
+}

@@ -1,0 +1,80 @@
+@import 'variables';
+@import 'mixins';
+
+// Default message styling
+.messageItem {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 1rem 0;
+
+    .userColor {
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 10px;
+    }
+
+    .message {
+        padding: 0.7em 1em;
+        margin: 0.3em 0;
+        max-width: 85%;
+        line-height: 1.4;
+        word-wrap: break-word;
+        background-color: $color2;
+    }
+}
+
+// Other users styling
+.userMessage {
+    align-items: start;
+
+    .authorWrap {
+        display: flex;
+        align-items: center;
+
+        .author {
+            margin-left: 0.3rem;
+        }
+    }
+
+    .message {
+        border-radius: 0 10px 10px 10px;
+    }
+
+    .time {
+        margin-left: 1rem;
+    }
+}
+
+// Current user styling
+.currentUserMessage {
+    align-items: end;
+
+    .authorWrap {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .author {
+            margin-right: 0.3rem;
+        }
+    }
+
+    .message {
+        border-radius: 10px 0 10px 10px;
+        background-color: $accentColor;
+        color: $color2;
+        font-weight: 600;
+    }
+
+    .time {
+        margin-right: 1rem;
+    }
+}
+
+// Notification message styling
+
+.notificationMessage {
+    text-align: center;
+    color: $accentColor;
+}

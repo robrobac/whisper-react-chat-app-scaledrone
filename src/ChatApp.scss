@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mixins';
+
+.chatApp {
+    background-color: $contentWindow;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    max-height: 80%;
+    width: 1200px;
+    max-width: 100%;
+    padding: 2rem;
+
+    .verticalDivider {
+        width: 2px;
+        margin: 0 2rem;
+        background-color: $color2;
+
+    }
+}

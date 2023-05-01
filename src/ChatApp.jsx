@@ -1,7 +1,7 @@
 import React from 'react';
-
 import Sidebar from './Sidebar';
 import Chat from './Chat'
+import './ChatApp.scss'
 
 
 export default function ChatApp({currentUser}) {
@@ -31,8 +31,9 @@ export default function ChatApp({currentUser}) {
 
     return (
         <div className='chatApp'>
-            <Chat room={room} drone={drone}/>
             <Sidebar room={room} drone={drone}/>
+            <div className='verticalDivider'></div>
+            <Chat room={room} drone={drone}/>
         </div>
   )
 };

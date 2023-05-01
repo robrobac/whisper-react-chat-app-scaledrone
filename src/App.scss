@@ -1,9 +1,21 @@
 @import 'variables';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap');
 
 * {
     font-family: 'Inter', sans-serif;
     color: $color1;
+}
+
+.app {
+    height: 100%;
+    @include flexColumnCenter;
+    justify-content: space-between;
+
+}
+
+li {
+    list-style: none;
 }
 
 body {
@@ -13,6 +25,9 @@ body {
 header,
 footer {
     background-color: $headerFooterBg;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
 
     h1,
     span {

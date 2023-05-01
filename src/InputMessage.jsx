@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './InputMessage.scss'
 
 export default function InputMessage ({onSubmit}) {
     const [text, setText] = useState("");
@@ -15,13 +16,11 @@ export default function InputMessage ({onSubmit}) {
 
     return (
         <form onSubmit={handleSubmit} className="messageForm">
-            <label> Message
-                <input className="messageInput"
-                    required
-                    type="text"
-                    value={text}
-                    onChange={handleInputChange} />
-            </label>
+            <input className="messageInput"
+                required
+                type="text"
+                value={text}
+                onChange={handleInputChange} />
             <button className="messageButton" type="submit">Send</button>
         </form>
     )
