@@ -1,0 +1,65 @@
+@import 'variables';
+@import 'mixins';
+
+.loginScreen {
+    max-width: 700px;
+    text-align: center;
+
+    span {
+        color: $accentColor;
+    }
+
+    .loginForm {
+        margin: 3rem 0;
+        padding: 2rem;
+        background-color: $contentWindow;
+        @include flexColumnCenter;
+
+        hr {
+            background-color: $color2;
+            border: none;
+            height: 2px;
+            width: 100%;
+            margin: 2rem 0;
+        }
+
+        .inputLabel {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            .formInput {
+                text-align: center;
+                font-size: 1.5rem;
+                color: $color2;
+                margin-top: 3px;
+                height: 3rem;
+                width: 100%;
+                background-color: $color1;
+                border: none;
+            }
+
+            #username:focus {
+                border-style: none;
+                outline: none;
+                border: solid 3px $accentColor;
+            }
+
+            #color {
+                cursor: pointer;
+            }
+        }
+
+        .loginButton {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.2rem;
+            background-color: $accentColor;
+            color: $color2;
+            width: 100%;
+            margin-top: 1rem;
+            height: 3rem;
+            border: none;
+        }
+
+    }
+}

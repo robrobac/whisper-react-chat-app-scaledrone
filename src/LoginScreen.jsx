@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './LoginScreen.scss'
 
 export default function LoginScreen({ onLogin }) {
     const [username, setUsername] = useState("");
@@ -19,25 +20,47 @@ export default function LoginScreen({ onLogin }) {
     }
 
     return (
-        <main className='login'>
+        <main className='loginScreen'>
+
+            <h2>
+            Welcome to <span>Whisper</span> chat application.
+            </h2>
+
             <form onSubmit={handleSubmit} className='loginForm'>
-                <label> Username:
-                    <input className='usernameInput'
+
+                <p>
+                    Please choose your <span>username</span> and <span>colour</span> and press Enter to join the Chat.
+                </p>
+
+                <hr></hr>
+
+                <label className='inputLabel'>
+                    Username
+                    <input className='formInput'
+                        id='username'
                         required
                         type='text'
                         value={username}
                         onChange={handleUsernameChange}
                     />
                 </label>
-                <label> Color:
-                    <input className='colorInput'
+                
+                <label className='inputLabel'>
+                    Color:
+                    <input className='formInput'
+                        id='color'
                         type='color'
                         value={color}
                         onChange={handleColorChange}
                     />
                 </label>
+
                 <button className="loginButton" type="submit">Send</button>
+
             </form>
+            <p>
+            Please remember to treat others with <span>kindness</span> and <span>respect</span>. We believe that a <span>positive</span> and <span>respectful</span> community is crucial to creating a great experience for everyone involved.
+            </p>
         </main>
     )
 };
