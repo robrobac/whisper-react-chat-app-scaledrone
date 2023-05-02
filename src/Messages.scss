@@ -6,10 +6,25 @@
     height: 100%;
     overflow: auto;
     margin-bottom: 2rem;
+}
 
+/* Style the scrollbar */
+.messages::-webkit-scrollbar {
+    width: 5px;
+}
 
-    .messagesList {
-        overflow: auto;
+/* Track */
+.messages::-webkit-scrollbar-track {
+    background: $color2;
+}
 
-    }
+/* Handle */
+.messages::-webkit-scrollbar-thumb {
+    background: $headerFooterBg;
+}
+
+/* Handle on hover */
+.messages::-webkit-scrollbar-thumb:hover {
+    background: #555;
+
 }
