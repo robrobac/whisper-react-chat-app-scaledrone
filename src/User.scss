@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.userColor {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50px;
+    margin-right: 0.5rem;
+}

@@ -3,7 +3,11 @@ import './LoginScreen.scss'
 
 export default function LoginScreen({ onLogin }) {
     const [username, setUsername] = useState("");
-    const [color, setColor] = useState("#000000");
+    const [color, setColor] = useState(randomColor());
+
+    function randomColor() {
+        return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+      }
 
     const handleUsernameChange = (event) => {
         setUsername(event.target.value);
@@ -42,6 +46,7 @@ export default function LoginScreen({ onLogin }) {
                         type='text'
                         value={username}
                         onChange={handleUsernameChange}
+                        maxLength="20"
                     />
                 </label>
                 

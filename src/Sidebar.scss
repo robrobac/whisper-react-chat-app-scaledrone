@@ -1,9 +1,9 @@
 @import 'variables';
 @import 'mixins';
 
-.chat {
+.sidebar {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 20%;
     justify-content: space-between;
 }

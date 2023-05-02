@@ -1,5 +1,6 @@
 import React from "react";
 import Users from "./Users";
+import './Sidebar.scss'
 
 export default function Sidebar (props) {
     const drone = props.drone;

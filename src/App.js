@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LoginScreen from './LoginScreen';
 import ChatApp from './ChatApp';
+import { ReactComponent as Logo } from './logo.svg';
 import './App.scss'
 
 export default function App() {
@@ -13,7 +14,7 @@ export default function App() {
     return (
         <div className='app'>
             <header>
-                <h1>Whisper App</h1>
+                <Logo className='logo' />
             </header>
 
             {user ? (<ChatApp currentUser={user} />) : (<LoginScreen onLogin={handleLogin} />)}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import User from "./User";
+import './Users.scss'
 
 export default function Users(props) {
   const [users, setUsers] = useState([]);
@@ -41,6 +42,7 @@ export default function Users(props) {
                 />
             </ul>
         )}
+        <p className="online">Currently Online</p>
         <ul className="usersList">
             {otherUsers.map((user) => (
                 <User

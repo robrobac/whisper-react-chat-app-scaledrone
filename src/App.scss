@@ -29,8 +29,12 @@ footer {
     width: 100%;
     padding: 1rem;
 
-    h1,
     span {
         color: $accentColor;
     }
+}
+
+.logo {
+    fill: $accentColor;
+    height: 50px;
 }
