@@ -71,7 +71,14 @@ export default function Messages (props) {
         <div className="messages">
             <ul className="messagesList">
                 {messages.map((message) => (
-                    <Message key={message.id} text={message.data} authorId={message.member.id} author={message.member.clientData.name} time={message.timestamp} currentUser={currentUserId} color={message.member.clientData.color}/>
+                    <Message
+                        key={message.id}
+                        text={message.data}
+                        authorId={message.member.id}
+                        author={message.member.clientData.name}
+                        time={message.timestamp}
+                        currentUser={currentUserId}
+                        color={message.member.clientData.color}/>
                 ))}
                 <div ref={messagesEndRef} />
             </ul>

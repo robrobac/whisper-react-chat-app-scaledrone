@@ -4,7 +4,7 @@
 
 * {
     font-family: 'Inter', sans-serif;
-    color: $color1;
+    color: $txtLight;
 }
 
 .app {
@@ -19,22 +19,21 @@ li {
 }
 
 body {
-    background-color: $color2;
+    background-color: $background;
 }
 
 header,
 footer {
-    background-color: $headerFooterBg;
     text-align: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
 
     span {
-        color: $accentColor;
+        color: $accent;
     }
 }
 
 .logo {
-    fill: $accentColor;
+    fill: $accent;
     height: 50px;
 }

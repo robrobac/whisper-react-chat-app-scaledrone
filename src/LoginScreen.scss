@@ -6,17 +6,18 @@
     text-align: center;
 
     span {
-        color: $accentColor;
+        color: $accent;
     }
 
     .loginForm {
+        border-radius: 15px;
         margin: 3rem 0;
         padding: 2rem;
-        background-color: $contentWindow;
+        background-color: $mainWindow;
         @include flexColumnCenter;
 
         hr {
-            background-color: $color2;
+            background-color: $background;
             border: none;
             height: 2px;
             width: 100%;
@@ -30,18 +31,19 @@
             .formInput {
                 text-align: center;
                 font-size: 1.5rem;
-                color: $color2;
+                color: $inputText;
                 margin-top: 3px;
                 height: 3rem;
                 width: 100%;
-                background-color: $color1;
-                border: none;
+                background-color: $input;
+                border: 1px solid $background;
+                border-radius: 5px;
             }
 
             #username:focus {
                 border-style: none;
                 outline: none;
-                border: solid 3px $accentColor;
+                border: solid 3px $accent;
             }
 
             #color {
@@ -53,12 +55,13 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 1.2rem;
-            background-color: $accentColor;
-            color: $color2;
+            background-color: $button;
+            color: $txtDark;
             width: 100%;
             margin-top: 1rem;
             height: 3rem;
             border: none;
+            border-radius: 5px;
         }
 
     }

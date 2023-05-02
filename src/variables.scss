@@ -1,6 +1,25 @@
-// Dark Mode
-$color1: #d6d6d6; // Text color
-$color2: #252525; // background black or text color
-$headerFooterBg: #4d4d4d; // header and footer
-$contentWindow: #414141; // content window color
-$accentColor: #bb86fc; // accent color
+$txtDark: #070b14;
+$txtLight: #f0f0f0;
+$mainWindow: #070b14;
+$accent: #f48226;
+$background: #131b2e;
+$userMessage: #26c4f4;
+$message: #24324c;
+$button: #26c4f4;
+$input: #f0f0f0;
+$inputText: $txtDark;
+$scrollbar: #26c4f4;
+
+/* 
+$txtDark: #f8f4eb;
+$txtLight: #0f0f0f;
+$mainWindow: #f8f4eb;
+$accent: #0b7fd7;
+$background: #ece4d1;
+$userMessage: #d93b0b;
+$message: #dbcdb3;
+$button: #d93b0b;
+$input: #ffffff;
+$inputText: $txtLight;
+$scrollbar: #d93b0b;
+*/

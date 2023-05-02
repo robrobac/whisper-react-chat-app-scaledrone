@@ -9,7 +9,7 @@ export default function User({ name, color }) {
 
     return (
         <li className="user">
-            <div style={userColorStyle} className="userColor"></div>
+            <div style={userColorStyle} className="userListColor"></div>
             <p>{name}</p>
         </li>
     )

@@ -7,12 +7,11 @@
     flex-direction: column;
     max-width: 100%;
     margin: 1rem 0;
-    margin-right: 5px;
 
     .userColor {
         width: 0.7rem;
         height: 0.7rem;
-        border-radius: 10px;
+        border-radius: 100px;
     }
 
     .message {
@@ -21,7 +20,7 @@
         max-width: 85%;
         line-height: 1.4;
         word-wrap: break-word;
-        background-color: $color2;
+
     }
 }
 
@@ -40,6 +39,7 @@
 
     .message {
         border-radius: 0 10px 10px 10px;
+        background-color: $message;
     }
 
     .time {
@@ -50,6 +50,7 @@
 // Current user styling
 .currentUserMessage {
     align-items: end;
+    margin-right: 5px;
 
     .authorWrap {
         display: flex;
@@ -63,8 +64,8 @@
 
     .message {
         border-radius: 10px 0 10px 10px;
-        background-color: $accentColor;
-        color: $color2;
+        background-color: $userMessage;
+        color: $txtDark;
         font-weight: 600;
     }
 
@@ -77,5 +78,5 @@
 
 .notificationMessage {
     text-align: center;
-    color: $accentColor;
+    color: $accent;
 }

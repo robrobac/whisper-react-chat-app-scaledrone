@@ -46,7 +46,7 @@ export default function LoginScreen({ onLogin }) {
                         type='text'
                         value={username}
                         onChange={handleUsernameChange}
-                        maxLength="20"
+                        maxLength="10"
                     />
                 </label>
                 

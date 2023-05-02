@@ -3,13 +3,12 @@
 
 .user {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
-.userColor {
-    width: 1.5rem;
-    height: 1.5rem;
+.userListColor {
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: 50px;
     margin-right: 0.5rem;
 }
