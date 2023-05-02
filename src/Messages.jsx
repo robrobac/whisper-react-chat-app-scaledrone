@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Message from "./Message";
 import './Messages.scss'
 
@@ -6,11 +6,23 @@ export default function Messages (props) {
     const room = props.room;
     const currentUserId = props.room.scaledrone.clientId;
     const [messages, setMessages] = useState([]);
+    const messagesEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    
+    useEffect(() => {
+        scrollToBottom();
+      }, [messages]);
     
     useEffect(() => {
         room.on('message', message => {
+            const messageSound = new Audio("/messageNotification.mp3");
+            messageSound.volume = 0.1;
             setMessages(messages => [...messages, message]);
             console.log("New Message received:", message)
+            messageSound.play()
         });
     }, [room]);
     
@@ -61,6 +73,7 @@ export default function Messages (props) {
                 {messages.map((message) => (
                     <Message key={message.id} text={message.data} authorId={message.member.id} author={message.member.clientData.name} time={message.timestamp} currentUser={currentUserId} color={message.member.clientData.color}/>
                 ))}
+                <div ref={messagesEndRef} />
             </ul>
         </div>
     )
