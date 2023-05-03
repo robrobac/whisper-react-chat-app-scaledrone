@@ -6,4 +6,9 @@
     flex-direction: column;
     min-width: 220px;
     justify-content: space-between;
+
+    .toggleButtonContainer {
+        display: flex;
+        justify-content: center;
+    }
 }

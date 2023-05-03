@@ -8,10 +8,10 @@ export const ThemeContext = createContext(null);
 
 export default function App() {
     const [user, setUser] = useState("");
-    const [theme, setTheme] = useState("dark")
+    const [themeColor, setThemeColor] = useState("dark")
 
     const toggleTheme = () => {
-        setTheme((current) => (current === "light" ? "dark" : "light"))
+        setThemeColor((current) => (current === "light" ? "dark" : "light"))
     }
 
     //  Sets the Username and Color from Login Screen.
@@ -20,8 +20,8 @@ export default function App() {
     };
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <div className='app' id={theme}>
+        <ThemeContext.Provider value={{ themeColor, toggleTheme }}>
+            <div className='app' id={themeColor}>
                 <header>
                     <Logo className='logo' />
                 </header>

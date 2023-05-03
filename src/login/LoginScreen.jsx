@@ -32,11 +32,11 @@ export default function LoginScreen({ onLogin }) {
             Welcome to <span>Whisper</span> chat application.
             </h2>
 
-            <ThemeButton />
-
             <form onSubmit={handleSubmit} className='loginForm'>
 
-                <p>
+            <ThemeButton />
+
+                <p className='loginInstructions'>
                     Please choose your <span>username</span> and <span>colour</span> and press Enter to join the Chat.
                 </p>
 

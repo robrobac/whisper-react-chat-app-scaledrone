@@ -1,0 +1,50 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.toggleThemeButton {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 10pt;
+    font-weight: 500;
+
+    p:first-of-type {
+        color: $scrollbar;
+    }
+
+    p:last-of-type {
+        color: $background;
+    }
+}
+
+.toggleThemeButton .MuiSwitch-track {
+    background-color: $scrollbarHover;
+    opacity: 100;
+}
+
+.toggleThemeButton .MuiSwitch-thumb {
+    background-color: $scrollbar;
+}
+
+// LIGHT THEME
+#light .toggleThemeButton .MuiSwitch-track {
+    background-color: $scrollbarHover-light;
+    opacity: 100;
+}
+
+#light .toggleThemeButton .MuiSwitch-thumb {
+    background-color: $scrollbar-light;
+}
+
+#light .toggleThemeButton {
+    display: flex;
+    align-items: center;
+
+    p:first-of-type {
+        color: $background-light;
+    }
+
+    p:last-of-type {
+        color: $scrollbar-light;
+    }
+}

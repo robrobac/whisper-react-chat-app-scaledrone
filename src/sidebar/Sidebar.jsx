@@ -10,7 +10,9 @@ export default function Sidebar (props) {
     return (
         <aside className="sidebar">
             <Users room={room} drone={drone}/>
+            <div className="toggleButtonContainer">
             <ThemeButton />
+            </div>
         </aside>
     )
 };

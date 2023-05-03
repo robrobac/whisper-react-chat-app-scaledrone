@@ -1,12 +1,26 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { ThemeContext } from '../App';
 import './ThemeButton.scss'
+import { Switch } from "@mui/material";
 
 export default function ThemeButton() {
-    const { theme, toggleTheme } = useContext(ThemeContext);
+    const { themeColor, toggleTheme } = useContext(ThemeContext);
+    const [value, setValue] = useState(false);
+
+    useEffect(() => {
+        if (themeColor === "dark") {
+            setValue(false)
+        } else {
+            setValue(true)
+        }
+    }, [themeColor])
+
     return (
-        <div>
-        <button onClick={toggleTheme}>{theme}</button>
+        <div className="toggleThemeButton">
+            <p>Dark</p>
+            <Switch onChange={toggleTheme} checked={value} />
+            <p>Light</p>
         </div>
     )
 }
+

@@ -16,6 +16,10 @@
         background-color: $mainWindow;
         @include flexColumnCenter;
 
+        .loginInstructions {
+            margin-top: 2rem;
+        }
+
         hr {
             background-color: $background;
             border: none;
