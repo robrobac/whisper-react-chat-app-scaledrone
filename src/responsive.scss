@@ -1,0 +1,34 @@
+// Remove border radius and set chat width to 100% on 1505 width and smaller
+@media only screen and (max-width: 1505px) {
+    .chatApp {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+// Remove border radius and set login form width to 100% on 705 width and smaller
+@media only screen and (max-width: 705px) {
+    .loginScreen .loginForm {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .loginScreen .disclaimer {
+        margin: 0 1em;
+    }
+}
+
+// Smaller font sizes on mobile devices
+@media only screen and (max-width: 425px) {
+    .welcomeMessage {
+        font-size: 14pt;
+    }
+
+    .loginInstructions {
+        font-size: 10pt;
+    }
+
+    .disclaimer {
+        font-size: 10pt;
+    }
+}

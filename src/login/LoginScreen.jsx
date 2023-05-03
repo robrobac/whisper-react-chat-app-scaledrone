@@ -27,21 +27,15 @@ export default function LoginScreen({ onLogin }) {
 
     return (
         <main className='loginScreen'>
-
-            <h2>
+            <h2 className='welcomeMessage'>
             Welcome to <span>Whisper</span> chat application.
             </h2>
-
             <form onSubmit={handleSubmit} className='loginForm'>
-
             <ThemeButton />
-
                 <p className='loginInstructions'>
                     Please choose your <span>username</span> and <span>colour</span> and press Enter to join the Chat.
                 </p>
-
                 <hr></hr>
-
                 <label className='inputLabel'>
                     Username
                     <input className='formInput'
@@ -53,7 +47,6 @@ export default function LoginScreen({ onLogin }) {
                         maxLength="10"
                     />
                 </label>
-                
                 <label className='inputLabel'>
                     Color:
                     <input className='formInput'
@@ -63,11 +56,9 @@ export default function LoginScreen({ onLogin }) {
                         onChange={handleColorChange}
                     />
                 </label>
-
                 <button className="loginButton" type="submit">Send</button>
-
             </form>
-            <p>
+            <p className='disclaimer'>
             Please remember to treat others with <span>kindness</span> and <span>respect</span>. We believe that a <span>positive</span> and <span>respectful</span> community is crucial to creating a great experience for everyone involved.
             </p>
         </main>

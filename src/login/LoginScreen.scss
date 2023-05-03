@@ -4,14 +4,17 @@
 .loginScreen {
     max-width: 700px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     span {
         color: $accent;
     }
 
     .loginForm {
+        margin: 1em 0;
         border-radius: 15px;
-        margin: 3rem 0;
         padding: 2rem;
         background-color: $mainWindow;
         @include flexColumnCenter;
@@ -67,13 +70,11 @@
             border: none;
             border-radius: 5px;
         }
-
     }
 }
 
 
 // LIGHT THEME
-
 #light .loginScreen {
     span {
         color: $accent-light;
