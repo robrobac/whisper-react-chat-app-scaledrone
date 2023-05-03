@@ -2,25 +2,26 @@
 @import './helpers/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap');
 
-* {
-    font-family: 'Inter', sans-serif;
-    color: $txtLight;
-}
 
-.app {
+#dark.app {
     height: 100%;
     @include flexColumnCenter;
     justify-content: space-between;
+    background-color: $background;
+    font-family: 'Inter', sans-serif;
+    color: $txtLight;
+    transition: $themeTransition;
+}
+
+//  Header logo color and size
+.logo {
+    fill: $accent;
+    height: 50px;
 }
 
 //  Resets the list-style for all lists.
 li {
     list-style: none;
-}
-
-//  APP Background
-body {
-    background-color: $background;
 }
 
 //  Header and Footer size and alignment
@@ -35,8 +36,26 @@ footer {
     }
 }
 
-//  Header logo color and size
-.logo {
-    fill: $accent;
-    height: 50px;
+
+// LIGHT MODE
+
+#light.app {
+    height: 100%;
+    @include flexColumnCenter;
+    justify-content: space-between;
+    background-color: $background-light;
+    font-family: 'Inter', sans-serif;
+    color: $txtLight-light;
+    transition: $themeTransition;
+}
+
+#light .logo {
+    fill: $accent-light;
+}
+
+#light header,
+footer {
+    span {
+        color: $accent;
+    }
 }

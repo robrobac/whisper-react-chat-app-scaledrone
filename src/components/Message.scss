@@ -79,3 +79,22 @@
     text-align: center;
     color: $accent;
 }
+
+// LIGHT MODE
+
+#light .userMessage {
+    .message {
+        background-color: $message-light;
+    }
+}
+
+#light .currentUserMessage {
+    .message {
+        background-color: $userMessage-light;
+        color: $txtDark;
+    }
+}
+
+#light .notificationMessage {
+    color: $accent-light;
+}

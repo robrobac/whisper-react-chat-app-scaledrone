@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Message from "./Message";
+import Message from "../components/Message";
 import './Messages.scss'
 
 export default function Messages (props) {

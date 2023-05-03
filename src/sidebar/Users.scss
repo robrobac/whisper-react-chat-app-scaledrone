@@ -22,5 +22,12 @@
             margin-bottom: 0.5rem;
         }
     }
+}
 
+// LIGHT MODE
+
+#light .users {
+    .online {
+        color: $accent-light;
+    }
 }

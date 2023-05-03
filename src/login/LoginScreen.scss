@@ -66,3 +66,38 @@
 
     }
 }
+
+
+// LIGHT THEME
+
+#light .loginScreen {
+    span {
+        color: $accent-light;
+    }
+
+    .loginForm {
+        background-color: $mainWindow-light;
+
+        hr {
+            background-color: $background-light;
+        }
+
+        .inputLabel {
+            .formInput {
+                color: $inputText-light;
+                background-color: $input-light;
+                border: 1px solid $background-light;
+            }
+
+            #username:focus {
+                border: solid 3px $accent-light;
+            }
+        }
+
+        .loginButton {
+            background-color: $button-light;
+            color: $txtDark-light;
+        }
+
+    }
+}

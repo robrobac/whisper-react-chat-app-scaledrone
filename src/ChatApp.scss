@@ -19,3 +19,13 @@
 
     }
 }
+
+// LIGHT MODE
+
+#light .chatApp {
+    background-color: $mainWindow-light;
+
+    .verticalDivider {
+        background-color: $background-light;
+    }
+}

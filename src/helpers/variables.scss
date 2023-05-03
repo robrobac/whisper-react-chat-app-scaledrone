@@ -1,3 +1,6 @@
+$themeTransition: .3s;
+
+// DARK MODE PALETTE
 $txtDark: #070b14;
 $txtLight: #f0f0f0;
 $mainWindow: #070b14;
@@ -9,17 +12,18 @@ $button: #26c4f4;
 $input: #f0f0f0;
 $inputText: $txtDark;
 $scrollbar: #26c4f4;
+$scrollbarHover: #26c4f490;
 
-/* 
-$txtDark: #f8f4eb;
-$txtLight: #0f0f0f;
-$mainWindow: #f8f4eb;
-$accent: #0b7fd7;
-$background: #ece4d1;
-$userMessage: #d93b0b;
-$message: #dbcdb3;
-$button: #d93b0b;
-$input: #ffffff;
-$inputText: $txtLight;
-$scrollbar: #d93b0b;
-*/
+// LIGHT MODE PALETTE
+$txtDark-light: #f8f4eb;
+$txtLight-light: #0f0f0f;
+$mainWindow-light: #f8f4eb;
+$accent-light: #0b7fd7;
+$background-light: #ece4d1;
+$userMessage-light: #d93b0b;
+$message-light: #dbcdb3;
+$button-light: #d93b0b;
+$input-light: #ffffff;
+$inputText-light: $txtLight-light;
+$scrollbar-light: #d93b0b;
+$scrollbarHover-light: #d93b0b90;

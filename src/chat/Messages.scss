@@ -25,6 +25,20 @@
 
 //  SCrollbar Handle on hover
 .messages::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    opacity: 5;
+    background: $scrollbarHover;
+}
 
+// LIGHT MODE
+
+#light .messages::-webkit-scrollbar-track {
+    background: $background-light;
+}
+
+#light .messages::-webkit-scrollbar-thumb {
+    background: $scrollbar-light;
+}
+
+#light .messages::-webkit-scrollbar-thumb:hover {
+    background: $scrollbarHover-light;
 }

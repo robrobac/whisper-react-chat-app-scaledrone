@@ -35,3 +35,18 @@
         border-radius: 5px;
     }
 }
+
+// LIGHT MODE
+
+#light .messageForm {
+    .messageInput {
+        color: $inputText-light;
+        background-color: $input-light;
+        border: 1px solid $background-light;
+    }
+
+    .messageButton {
+        background-color: $button-light;
+        color: $txtDark-light;
+    }
+}

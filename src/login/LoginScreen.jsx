@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import './LoginScreen.scss'
+import './LoginScreen.scss';
+import ThemeButton from '../components/ThemeButton';
 
 export default function LoginScreen({ onLogin }) {
+
     const [username, setUsername] = useState("");
     const [color, setColor] = useState(randomColor());
 
@@ -29,6 +31,8 @@ export default function LoginScreen({ onLogin }) {
             <h2>
             Welcome to <span>Whisper</span> chat application.
             </h2>
+
+            <ThemeButton />
 
             <form onSubmit={handleSubmit} className='loginForm'>
 

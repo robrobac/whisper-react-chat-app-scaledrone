@@ -4,7 +4,7 @@ import Chat from './chat/Chat'
 import './ChatApp.scss'
 
 
-export default function ChatApp({currentUser}) {
+function ChatApp({currentUser}) {
 
     // Connecting to Scaledrone Channel
     const drone = new window.Scaledrone('gdFAiLaQOHNBawDl', {
@@ -37,3 +37,5 @@ export default function ChatApp({currentUser}) {
         </div>
     )
 };
+
+export default React.memo(ChatApp);

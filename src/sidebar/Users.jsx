@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import User from "./User";
+import User from "../components/User";
 import './Users.scss'
 
 export default function Users(props) {
+
   const [users, setUsers] = useState([]);
 
   const room = props.room;
