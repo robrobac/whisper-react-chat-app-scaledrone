@@ -7,7 +7,7 @@ export default function LoginScreen({ onLogin }) {
 
     function randomColor() {
         return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
-      }
+    };
 
     const handleUsernameChange = (event) => {
         setUsername(event.target.value);
@@ -20,8 +20,8 @@ export default function LoginScreen({ onLogin }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         onLogin(username, color);
-        console.log("New user submited - Username:", username, ", color:", color)
-    }
+        console.log("New user submited - Username:", username, ", color:", color);
+    };
 
     return (
         <main className='loginScreen'>

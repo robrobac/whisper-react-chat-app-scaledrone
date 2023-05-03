@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import './helpers/variables';
+@import './helpers/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap');
 
 * {
@@ -11,17 +11,19 @@
     height: 100%;
     @include flexColumnCenter;
     justify-content: space-between;
-
 }
 
+//  Resets the list-style for all lists.
 li {
     list-style: none;
 }
 
+//  APP Background
 body {
     background-color: $background;
 }
 
+//  Header and Footer size and alignment
 header,
 footer {
     text-align: center;
@@ -33,6 +35,7 @@ footer {
     }
 }
 
+//  Header logo color and size
 .logo {
     fill: $accent;
     height: 50px;

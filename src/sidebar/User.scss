@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import '../helpers/variables';
+@import '../helpers/mixins';
 
 .user {
     display: flex;

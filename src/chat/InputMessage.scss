@@ -1,4 +1,5 @@
-@import 'variables';
+@import '../helpers/variables';
+@import '../helpers/mixins';
 
 .messageForm {
     display: flex;

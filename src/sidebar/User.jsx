@@ -5,7 +5,7 @@ export default function User({ name, color }) {
 
     const userColorStyle = {
         backgroundColor: `${color}`,
-    }
+    };
 
     return (
         <li className="user">
@@ -13,4 +13,4 @@ export default function User({ name, color }) {
             <p>{name}</p>
         </li>
     )
-}
+};

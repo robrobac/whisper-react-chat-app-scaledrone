@@ -24,4 +24,4 @@ export default function InputMessage ({onSubmit}) {
             <button className="messageButton" type="submit">Send</button>
         </form>
     )
-}
+};

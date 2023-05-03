@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import '../helpers/variables';
+@import '../helpers/mixins';
 
 .messages {
     width: 100%;
@@ -8,22 +8,22 @@
     margin-bottom: 2rem;
 }
 
-/* Style the scrollbar */
+//  Scrollbar
 .messages::-webkit-scrollbar {
     width: 5px;
 }
 
-/* Track */
+//  Scrollbar Track
 .messages::-webkit-scrollbar-track {
     background: $background;
 }
 
-/* Handle */
+//  Scrollbar Handle
 .messages::-webkit-scrollbar-thumb {
     background: $scrollbar;
 }
 
-/* Handle on hover */
+//  SCrollbar Handle on hover
 .messages::-webkit-scrollbar-thumb:hover {
     background: #555;
 

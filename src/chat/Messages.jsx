@@ -3,9 +3,11 @@ import Message from "./Message";
 import './Messages.scss'
 
 export default function Messages (props) {
+    const [messages, setMessages] = useState([]);
+
     const room = props.room;
     const currentUserId = props.room.scaledrone.clientId;
-    const [messages, setMessages] = useState([]);
+    
     const messagesEndRef = useRef(null);
 
     const scrollToBottom = () => {
@@ -14,15 +16,15 @@ export default function Messages (props) {
 
     useEffect(() => {
         scrollToBottom();
-      }, [messages]);
+    }, [messages]);
     
     useEffect(() => {
         room.on('message', message => {
             const messageSound = new Audio("/messageNotification.mp3");
             messageSound.volume = 0.1;
             setMessages(messages => [...messages, message]);
-            console.log("New Message received:", message)
-            messageSound.play()
+            messageSound.play();
+            console.log("New Message received:", message);
         });
     }, [room]);
     
@@ -38,9 +40,9 @@ export default function Messages (props) {
                         "color": "#000000"
                     }
                 }
-            }
+            };
             setMessages(messages => [...messages, notification]);
-            console.log("New Notification received:", notification)
+            console.log("New Notification received:", notification);
         });
 
         room.on('member_leave', (member) => {
@@ -54,11 +56,9 @@ export default function Messages (props) {
                         "color": "#000000"
                     }
                 }
-            }
+            };
             setMessages(messages => [...messages, notification]);
-            
-            console.log("New Notification received:", notification)
-
+            console.log("New Notification received:", notification);
             return () => {
                 room.off("members");
                 room.off("member_join");

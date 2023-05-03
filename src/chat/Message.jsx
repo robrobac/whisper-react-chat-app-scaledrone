@@ -3,17 +3,19 @@ import React from "react"
 import './Message.scss'
 
 export default function Message({ id, text, authorId, author, time, currentUser, color }) {
+    const [visible, setVisible] = useState(true);
+    
     const timestamp = time;
-    const [visible, setVisible] = useState(true)
-    const handleTimeToggle = () => {
-        setVisible((current) => !current)
-            
-    }
-    const userColorStyle = {
-        backgroundColor: `${color}`,
-    }
     const date = new Date(timestamp * 1000);
     const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+
+    const handleTimeToggle = () => {
+        setVisible((current) => !current);
+    };
+
+    const userColorStyle = {
+        backgroundColor: `${color}`,
+    };
 
     if (author === "notification") {
         return (
@@ -33,5 +35,4 @@ export default function Message({ id, text, authorId, author, time, currentUser,
             </li>
         )
     }
-    
-}
+};

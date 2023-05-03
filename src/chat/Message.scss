@@ -1,7 +1,7 @@
-@import 'variables';
-@import 'mixins';
+@import '../helpers/variables';
+@import '../helpers/mixins';
 
-// Default message styling
+//  Default message styling
 .messageItem {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
     }
 }
 
-// Other users styling
+//  Online users styling
 .userMessage {
     align-items: start;
 
@@ -47,7 +47,7 @@
     }
 }
 
-// Current user styling
+//  Current user styling
 .currentUserMessage {
     align-items: end;
     margin-right: 5px;
@@ -74,8 +74,7 @@
     }
 }
 
-// Notification message styling
-
+//  Notification message styling
 .notificationMessage {
     text-align: center;
     color: $accent;

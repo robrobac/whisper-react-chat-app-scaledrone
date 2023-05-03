@@ -1,12 +1,12 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import Chat from './Chat'
+import Sidebar from './sidebar/Sidebar';
+import Chat from './chat/Chat'
 import './ChatApp.scss'
 
 
 export default function ChatApp({currentUser}) {
 
-    // CONNECTING TO SCALEDRONE
+    // Connecting to Scaledrone Channel
     const drone = new window.Scaledrone('gdFAiLaQOHNBawDl', {
         data: {
             name: currentUser.username,
@@ -19,7 +19,7 @@ export default function ChatApp({currentUser}) {
         } console.log("Connected to Scaledrone", drone)
     });
 
-    // SUBSCRIBING TO ROOM
+    // Subscribing to Scaledrone Channel Room
     const room = drone.subscribe('observable-room');
     room.on('open', error => {
         if (error) {
@@ -27,7 +27,7 @@ export default function ChatApp({currentUser}) {
         } console.log("Subscribed to Room", room)
     });
 
-    console.log("New user created - Username:", currentUser.username, ", Color:", currentUser.color)
+    console.log("New user created - Username:", currentUser.username, ", Color:", currentUser.color);
 
     return (
         <div className='chatApp'>
@@ -35,5 +35,5 @@ export default function ChatApp({currentUser}) {
             <div className='verticalDivider'></div>
             <Chat room={room} drone={drone}/>
         </div>
-  )
+    )
 };

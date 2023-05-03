@@ -4,16 +4,16 @@ import Messages from './Messages';
 import './Chat.scss'
 
 export default function Chat(props) {
-    const drone = props.drone
-    const room = props.room
+    const drone = props.drone;
+    const room = props.room;
     
     const handleSendMessage = (text) => {
         drone.publish({
           room: "observable-room",
           message: text
         });
-        console.log("New message sent:", text)
-    }
+        console.log("New message sent:", text);
+    };
 
     return (
         <main className="chat">
@@ -21,4 +21,4 @@ export default function Chat(props) {
         <InputMessage onSubmit={handleSendMessage} />
         </main>
     )
-}
+};
