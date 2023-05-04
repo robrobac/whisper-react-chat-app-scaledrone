@@ -8,6 +8,10 @@
     flex-direction: column;
     justify-content: space-between;
 
+    .disclaimer {
+        padding: 0 1em;
+    }
+
     span {
         color: $accent;
     }

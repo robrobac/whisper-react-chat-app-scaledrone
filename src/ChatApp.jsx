@@ -33,7 +33,7 @@ function ChatApp({currentUser}) {
         <div className='chatApp'>
             <Sidebar room={room} drone={drone}/>
             <div className='verticalDivider'></div>
-            <Chat room={room} drone={drone}/>
+            <Chat room={room} drone={drone} />
         </div>
     )
 };

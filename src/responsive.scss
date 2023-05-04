@@ -1,3 +1,5 @@
+@import './helpers/variables';
+
 // Remove border radius and set chat width to 100% on 1505 width and smaller
 @media only screen and (max-width: 1505px) {
     .chatApp {
@@ -13,22 +15,125 @@
         border-radius: 0;
     }
 
+    .loginScreen .welcomeMessage {
+        font-size: 16pt;
+        margin: 0 1em;
+    }
+
     .loginScreen .disclaimer {
         margin: 0 1em;
+    }
+
+    // Hiding vertical divider in chat
+    .verticalDivider {
+        display: none;
+    }
+
+    // Smaller padding on smaller devices
+    .chatApp {
+        padding: 1em;
+
+        .chat {
+            width: 100%;
+            padding-left: 1em;
+            height: 100%;
+        }
+    }
+
+    // Laptop and Mobile Sidebar hide and show on click
+
+    .chatApp {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .sidebar {
+            background-color: rgba(0, 0, 0, 0);
+            position: fixed;
+            top: 0;
+            left: -100%;
+            // left: calc(-100% + 1em);
+            width: 100%;
+            height: 100%;
+            padding: 150px 0 100px 1em;
+            transform: translateX(1.5em);
+            // transition: transform 0.3s ease-in-out;
+            transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+
+            &.show {
+                transform: translateX(100%);
+                background-color: $sidebarOpacity;
+            }
+
+            .sidebarContainer {
+                min-width: 150px;
+            }
+
+            .sidebarButtonContainer {
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                .sidebarToggleButton {
+                    cursor: pointer;
+                    border: none;
+                    background-color: rgba(0, 0, 0, 0);
+                    text-align: right;
+                    height: 70%;
+                    width: 20px;
+
+                    svg {
+                        fill: $button;
+                        height: 50%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // Flipping the arrow when sidebar is open
+    .sidebar.show {
+
+        .sidebarButtonContainer {
+            .sidebarToggleButton {
+                svg {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+    }
+
+    //light mode
+    #light .sidebar {
+        background-color: rgba(0, 0, 0, 0);
+
+        &.show {
+            background-color: $sidebarOpacity-light;
+        }
+
+        .sidebarToggleButton {
+            svg {
+                fill: $button-light;
+            }
+        }
+
+
+
     }
 }
 
 // Smaller font sizes on mobile devices
 @media only screen and (max-width: 425px) {
-    .welcomeMessage {
-        font-size: 14pt;
+    .loginScreen .welcomeMessage {
+        font-size: 12pt;
     }
 
     .loginInstructions {
         font-size: 10pt;
     }
 
-    .disclaimer {
+    .loginScreen .disclaimer {
         font-size: 10pt;
     }
 }

@@ -4,7 +4,6 @@
 
 
 #dark.app {
-    height: 100%;
     @include flexColumnCenter;
     justify-content: space-evenly;
     background-color: $background;
@@ -26,6 +25,7 @@ li {
 
 //  Header and Footer size and alignment
 header {
+    z-index: 1;
     margin: 1em 0;
     text-align: center;
     width: 100%;
@@ -33,6 +33,7 @@ header {
 }
 
 footer {
+    z-index: 2;
     margin: 1em 0;
     text-align: center;
     width: 100%;

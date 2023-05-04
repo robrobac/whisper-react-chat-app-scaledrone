@@ -4,8 +4,11 @@
 .messages {
     width: 100%;
     height: 100%;
-    overflow: auto;
+
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: auto;
 }
 
 //  Scrollbar
