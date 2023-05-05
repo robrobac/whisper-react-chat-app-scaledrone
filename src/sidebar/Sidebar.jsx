@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Users from "./Users";
 import './Sidebar.scss'
 import ThemeButton from "../components/ThemeButton";
-import { ReactComponent as SidebarButton } from '../sidebarButton.svg';
+import SidebarButton from "../components/SidebarButton";
 
 export default function Sidebar (props) {
     const [showSidebar, setShowSidebar] = useState(false);
@@ -19,13 +19,13 @@ export default function Sidebar (props) {
             <div style={{ width: '20px' }}></div>
             <div className="sidebarContainer">
                 <Users room={room} drone={drone}/>
-                <div className="toggleButtonContainer">
+                <div className="toggleThemeButtonContainer">
                 <ThemeButton />
                 </div>
             </div>
-            <div className="sidebarButtonContainer">
-                <button className="sidebarToggleButton" onClick={toggleSidebar}>
-                    <SidebarButton />
+            <div className="toggleSidebarButtonContainer">
+                <button className="toggleSidebarButton" onClick={toggleSidebar}>
+                <SidebarButton />
                 </button>
             </div>
         </aside>

@@ -1,12 +1,13 @@
 @import '../helpers/variables';
 
+
 .sidebar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     justify-items: center;
 
-    .sidebarButtonContainer {
+    .toggleSidebarButtonContainer {
         display: none;
     }
 
@@ -17,7 +18,7 @@
         justify-content: space-between;
     }
 
-    .toggleButtonContainer {
+    .toggleThemeButtonContainer {
         display: flex;
         justify-content: center;
     }
