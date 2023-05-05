@@ -10,6 +10,10 @@
 
 // Remove border radius and set login form width to 100% on 705 width and smaller
 @media only screen and (max-width: 705px) {
+    .app {
+        min-height: 100dvh;
+    }
+
     .loginScreen .loginForm {
         max-width: 100%;
         border-radius: 0;
@@ -139,8 +143,19 @@
 
 // Smaller font sizes on mobile devices
 @media only screen and (max-width: 425px) {
+
+    .chatApp {
+        height: 70vh;
+    }
+
+    .app footer {
+        p {
+            font-size: 10pt;
+        }
+    }
+
     .loginScreen .welcomeMessage {
-        font-size: 12pt;
+        font-size: 10pt;
     }
 
     .loginInstructions {
@@ -148,6 +163,6 @@
     }
 
     .loginScreen .disclaimer {
-        font-size: 10pt;
+        font-size: 8pt;
     }
 }
