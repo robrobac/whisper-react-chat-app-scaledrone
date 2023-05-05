@@ -73,6 +73,10 @@
             height: 3rem;
             border: none;
             border-radius: 5px;
+
+            &:hover {
+                background-color: $buttonHover;
+            }
         }
     }
 }
@@ -106,6 +110,10 @@
         .loginButton {
             background-color: $button-light;
             color: $txtDark-light;
+
+            &:hover {
+                background-color: $buttonHover-light;
+            }
         }
 
     }

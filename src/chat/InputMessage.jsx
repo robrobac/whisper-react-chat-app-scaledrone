@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './InputMessage.scss'
 
+
 export default function InputMessage ({onSubmit}) {
     const [text, setText] = useState("");
 

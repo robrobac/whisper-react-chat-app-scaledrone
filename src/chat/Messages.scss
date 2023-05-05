@@ -13,6 +13,7 @@
 
 //  Scrollbar
 .messages::-webkit-scrollbar {
+    cursor: pointer;
     width: 5px;
 }
 
@@ -24,6 +25,7 @@
 //  Scrollbar Handle
 .messages::-webkit-scrollbar-thumb {
     background: $scrollbar;
+
 }
 
 //  SCrollbar Handle on hover

@@ -33,6 +33,10 @@
         height: 2rem;
         border: none;
         border-radius: 5px;
+
+        &:hover {
+            background-color: $buttonHover;
+        }
     }
 }
 
@@ -43,10 +47,18 @@
         color: $inputText-light;
         background-color: $input-light;
         border: 1px solid $background-light;
+
+        &:focus {
+            border: solid 3px $accent-light;
+        }
     }
 
     .messageButton {
         background-color: $button-light;
         color: $txtDark-light;
+
+        &:hover {
+            background-color: $buttonHover-light;
+        }
     }
 }
