@@ -3,7 +3,6 @@ import LoginScreen from './login/LoginScreen';
 import ChatApp from './ChatApp';
 import { ReactComponent as Logo } from './logo.svg';
 import './responsive.scss'
-
 import './App.scss'
 
 export const ThemeContext = createContext(null);

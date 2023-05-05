@@ -4,12 +4,9 @@ import Messages from './Messages';
 import './Chat.scss'
 
 export default function Chat(props) {
-    
     const drone = props.drone;
     const room = props.room;
 
-    
-    
     const handleSendMessage = (text) => {
         drone.publish({
           room: "observable-room",

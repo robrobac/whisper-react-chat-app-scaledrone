@@ -3,7 +3,6 @@ import Sidebar from './sidebar/Sidebar';
 import Chat from './chat/Chat'
 import './ChatApp.scss'
 
-
 function ChatApp({currentUser}) {
 
     // Connecting to Scaledrone Channel

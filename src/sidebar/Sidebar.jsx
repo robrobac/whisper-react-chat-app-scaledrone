@@ -5,12 +5,12 @@ import ThemeButton from "../components/ThemeButton";
 import { ReactComponent as SidebarButton } from '../sidebarButton.svg';
 
 export default function Sidebar (props) {
-    const [showSidebar, setShowSidebar] = useState(false); // OVO JE NOVO
+    const [showSidebar, setShowSidebar] = useState(false);
     
     const drone = props.drone;
     const room = props.room;
     
-    const toggleSidebar = () => { // OVO JE NOVO
+    const toggleSidebar = () => {
         setShowSidebar(!showSidebar);
     }
 

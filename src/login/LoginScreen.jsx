@@ -3,7 +3,6 @@ import './LoginScreen.scss';
 import ThemeButton from '../components/ThemeButton';
 
 export default function LoginScreen({ onLogin }) {
-
     const [username, setUsername] = useState("");
     const [color, setColor] = useState(randomColor());
 

@@ -7,7 +7,6 @@ export default function Messages (props) {
 
     const room = props.room;
     const currentUserId = props.room.scaledrone.clientId;
-    
     const messagesEndRef = useRef(null);
 
     const scrollToBottom = () => {

@@ -1,5 +1,4 @@
 @import './helpers/variables';
-@import './helpers/mixins';
 
 .chatApp {
     background-color: $mainWindow;
@@ -16,7 +15,6 @@
         width: 2px;
         margin: 0 2rem;
         background-color: $background;
-
     }
 }
 
