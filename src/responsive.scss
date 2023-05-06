@@ -11,12 +11,14 @@
 // Remove border radius and set login form width to 100% on 705 width and smaller
 @media only screen and (max-width: 705px) {
     .app {
-        min-height: 100dvh;
+        min-height: 100%;
+        justify-content: space-between;
     }
 
     .loginScreen .loginForm {
         max-width: 100%;
         border-radius: 0;
+        padding: 1rem;
     }
 
     .loginScreen .welcomeMessage {
@@ -155,14 +157,31 @@
     }
 
     .loginScreen .welcomeMessage {
-        font-size: 10pt;
+        font-size: 12pt;
     }
 
-    .loginInstructions {
-        font-size: 10pt;
+    .loginScreen {
+        .loginForm {
+
+            .loginInstructions {
+                font-size: 10pt;
+                margin-top: 1.5rem;
+
+            }
+
+            hr {
+                margin: 1.5rem 0;
+            }
+
+            .inputLabel {
+                margin-bottom: 1.5rem;
+            }
+        }
     }
+
+
 
     .loginScreen .disclaimer {
-        font-size: 8pt;
+        font-size: 7pt;
     }
 }
