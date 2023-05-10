@@ -4,7 +4,7 @@ import ChatApp from './ChatApp';
 import { ReactComponent as Logo } from './logo.svg';
 import './responsive.scss'
 import './App.scss'
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom';
 
 export const ThemeContext = createContext(null);
 
@@ -56,24 +56,24 @@ export default function App() {
     };
 
     return (
+        <BrowserRouter>
+            <ThemeContext.Provider value={{ themeColor, toggleTheme }}>
+                <div className='app' id={themeColor} style={height100}>
+                    <header>
+                        <Logo className='logo' />
+                    </header>
+                    <Routes>
+                        <Route path='/chat' element={user ? <ChatApp currentUser={user} /> : <Navigate to='/login' replace />} />
 
-        <ThemeContext.Provider value={{ themeColor, toggleTheme }}>
-            <div className='app' id={themeColor} style={height100}>
-                <header>
-                    <Logo className='logo' />
-                </header>
-                <Routes>
-                    <Route path='/chat' element={user ? <ChatApp currentUser={user} /> : <Navigate to='/login' replace />} />
+                        <Route path='/login' element={user ? <Navigate to='/chat' replace /> : <LoginScreen onLogin={handleLogin} />} />
 
-                    <Route path='/login' element={user ? <Navigate to='/chat' replace /> : <LoginScreen onLogin={handleLogin} />} />
-
-                    <Route path='/' element={<Navigate to={user ? '/chat' : '/login'} replace />} />
-                </Routes>
-                <footer>
-                    <p>Created by <span>Roberto Vukomanović</span>, 2023.</p>
-                </footer>
-            </div>
-        </ThemeContext.Provider>
-
+                        <Route path='/' element={<Navigate to={user ? '/chat' : '/login'} replace />} />
+                    </Routes>
+                    <footer>
+                        <p>Created by <span>Roberto Vukomanović</span>, 2023.</p>
+                    </footer>
+                </div>
+            </ThemeContext.Provider>
+        </BrowserRouter>
     )
 };
