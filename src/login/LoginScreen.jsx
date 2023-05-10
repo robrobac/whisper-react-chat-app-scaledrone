@@ -55,7 +55,7 @@ export default function LoginScreen({ onLogin }) {
                         onChange={handleColorChange}
                     />
                 </label>
-                <button className="loginButton" type="submit">Send</button>
+                <button className="loginButton" type="submit">Join the Chat</button>
             </form>
             <p className='disclaimer'>
             Please remember to treat others with <span>kindness</span> and <span>respect</span>. We believe that a <span>positive</span> and <span>respectful</span> community is crucial to creating a great experience for everyone involved.

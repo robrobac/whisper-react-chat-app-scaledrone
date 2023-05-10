@@ -4,6 +4,7 @@ import ChatApp from './ChatApp';
 import { ReactComponent as Logo } from './logo.svg';
 import './responsive.scss'
 import './App.scss'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 export const ThemeContext = createContext(null);
 
@@ -39,7 +40,6 @@ export default function App() {
         if (body.classList.contains("dark")) {
             body.classList.remove("dark")
             body.classList.add("light")
-            console.log(body);
         } else {
             body.classList.remove("light")
             body.classList.add("dark")
@@ -48,22 +48,32 @@ export default function App() {
 
     //  Sets the Username and Color from Login Screen.
     const handleLogin = (username, color) => {
+        if (username.trim().length === 0) {
+            // No empty names and more than one space
+            return
+        }
         setUser({ username, color });
     };
 
     return (
-        <ThemeContext.Provider value={{ themeColor, toggleTheme }}>
-            <div className='app' id={themeColor} style={height100}>
-                <header>
-                    <Logo className='logo' />
-                </header>
+        <BrowserRouter>
+            <ThemeContext.Provider value={{ themeColor, toggleTheme }}>
+                <div className='app' id={themeColor} style={height100}>
+                    <header>
+                        <Logo className='logo' />
+                    </header>
+                    <Routes>
+                        <Route path='/chat' element={user ? <ChatApp currentUser={user} /> : <Navigate to='/login' replace />} />
 
-                {user ? (<ChatApp currentUser={user} />) : (<LoginScreen onLogin={handleLogin} />)}
+                        <Route path='/login' element={user ? <Navigate to='/chat' replace /> : <LoginScreen onLogin={handleLogin} />} />
 
-                <footer>
-                    <p>Created by <span>Roberto Vukomanović</span>, 2023.</p>
-                </footer>
-            </div>
-        </ThemeContext.Provider>
+                        <Route path='/' element={<Navigate to={user ? '/chat' : '/login'} replace />} />
+                    </Routes>
+                    <footer>
+                        <p>Created by <span>Roberto Vukomanović</span>, 2023.</p>
+                    </footer>
+                </div>
+            </ThemeContext.Provider>
+        </BrowserRouter>
     )
 };
