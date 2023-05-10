@@ -1,5 +1,6 @@
 @import '../helpers/variables';
 
+// General Styling + Darkmode which is default.
 .toggleThemeButton {
     display: flex;
     align-items: center;
@@ -27,7 +28,7 @@
 
 }
 
-// LIGHT THEME
+// Light Mode Styling
 #light .toggleThemeButton .MuiSwitch-track {
     background-color: $scrollbarHover-light;
     opacity: 100;

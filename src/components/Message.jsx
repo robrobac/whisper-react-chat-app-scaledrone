@@ -3,7 +3,7 @@ import React from "react"
 import './Message.scss'
 
 export default function Message({ id, text, authorId, author, time, currentUser, color }) {
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(true); // Message date visible or not state.
     
     const timestamp = time;
     const date = new Date(timestamp * 1000);

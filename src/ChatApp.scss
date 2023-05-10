@@ -1,5 +1,6 @@
 @import './helpers/variables';
 
+// General Styling + Darkmode which is default.
 .chatApp {
     background-color: $mainWindow;
     display: flex;
@@ -17,8 +18,7 @@
     }
 }
 
-// LIGHT MODE
-
+// Light Mode Styling
 #light .chatApp {
     background-color: $mainWindow-light;
 

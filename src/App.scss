@@ -2,6 +2,8 @@
 @import './helpers/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;900&display=swap');
 
+
+// General Styling + Darkmode which is default.
 #dark.app {
     @include flexColumnCenter;
     justify-content: space-evenly;
@@ -43,8 +45,7 @@ footer {
     }
 }
 
-
-// LIGHT MODE
+// Light Mode Styling
 #light.app {
     height: 100%;
     @include flexColumnCenter;

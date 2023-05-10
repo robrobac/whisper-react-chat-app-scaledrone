@@ -1,6 +1,6 @@
-$themeTransition: .3s;
+$themeTransition: .3s; // Theme transition duration.
 
-// DARK MODE PALETTE
+// Dark Theme Color Palette, might merge duplicates into universal naming.
 $txtDark: #070b14;
 $txtLight: #f0f0f0;
 $mainWindow: #070b14;
@@ -16,7 +16,7 @@ $inputText: $txtDark;
 $scrollbar: #26c4f4;
 $scrollbarHover: #26c4f490;
 
-// LIGHT MODE PALETTE
+// Light Theme Color Palette, might merge duplicates into universal naming.
 $txtDark-light: #f8f4eb;
 $txtLight-light: #0f0f0f;
 $mainWindow-light: #f8f4eb;

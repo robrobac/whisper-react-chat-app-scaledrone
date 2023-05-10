@@ -1,5 +1,7 @@
 @import '../helpers/variables';
 
+
+// General Styling + Darkmode which is default.
 .users {
     display: flex;
     flex-direction: column;
@@ -23,8 +25,7 @@
     }
 }
 
-// LIGHT MODE
-
+// Light Mode Styling
 #light .users {
     .online {
         color: $accent-light;

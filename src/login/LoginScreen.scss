@@ -1,6 +1,7 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
+// General Styling + Darkmode which is default.
 .loginScreen {
     max-width: 700px;
     text-align: center;
@@ -81,8 +82,7 @@
     }
 }
 
-
-// LIGHT THEME
+// Light Mode Styling
 #light .loginScreen {
     span {
         color: $accent-light;

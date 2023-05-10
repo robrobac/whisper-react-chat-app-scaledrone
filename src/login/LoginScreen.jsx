@@ -6,7 +6,7 @@ export default function LoginScreen({ onLogin }) {
     const [username, setUsername] = useState("");
     const [color, setColor] = useState(randomColor());
 
-    function randomColor() {
+    function randomColor() { // Random color is set on Login Form as default, can be changed.
         return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
     };
 
@@ -20,7 +20,7 @@ export default function LoginScreen({ onLogin }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onLogin(username, color);
+        onLogin(username, color); // Function from App.js
         console.log("New user submited - Username:", username, ", color:", color);
     };
 

@@ -8,7 +8,7 @@
     }
 }
 
-// Remove border radius and set login form width to 100% on 705 width and smaller
+// Remove border radius and set login form and chat app width to 100% on 705 width and smaller
 @media only screen and (max-width: 705px) {
     .app {
         min-height: 100%;
@@ -30,7 +30,7 @@
         margin: 0 1em;
     }
 
-    // Hiding vertical divider in chat
+    // Hiding vertical divider
     .verticalDivider {
         display: none;
     }
@@ -47,7 +47,6 @@
     }
 
     // Laptop and Mobile Sidebar hide and show on click
-
     .chatApp {
         display: flex;
         flex-direction: column;
@@ -58,12 +57,10 @@
             position: fixed;
             top: 0;
             left: -100%;
-            // left: calc(-100% + 1em);
             width: 100%;
             height: 100%;
             padding: 150px 0 100px 0;
             transform: translateX(1.5em);
-            // transition: transform 0.3s ease-in-out;
             transition: transform .3s ease-in-out, background-color .3s ease-in-out;
 
             &.show {
@@ -110,7 +107,7 @@
         }
     }
 
-    // Flipping the arrow when sidebar is open
+    // sidebar button right margin when sidebar is open.
     .sidebar.show {
 
         .toggleSidebarButtonContainer {
@@ -123,7 +120,7 @@
         }
     }
 
-    //light mode
+    // Light Mode Styling
     #light .sidebar {
         background-color: rgba(0, 0, 0, 0);
 
@@ -137,8 +134,6 @@
                 fill: $txtDark-light;
             }
         }
-
-
 
     }
 }
@@ -178,8 +173,6 @@
             }
         }
     }
-
-
 
     .loginScreen .disclaimer {
         font-size: 7pt;

@@ -10,31 +10,26 @@
     overflow: auto;
 }
 
-//  Scrollbar
+// General Scrollbar Styling + Darkmode which is default.
 .messages::-webkit-scrollbar {
     cursor: pointer;
     width: 5px;
 }
 
-//  Scrollbar Track
 .messages::-webkit-scrollbar-track {
     background: $background;
 }
 
-//  Scrollbar Handle
 .messages::-webkit-scrollbar-thumb {
     background: $scrollbar;
-
 }
 
-//  SCrollbar Handle on hover
 .messages::-webkit-scrollbar-thumb:hover {
     opacity: 5;
     background: $scrollbarHover;
 }
 
-// LIGHT MODE
-
+// Light Mode Scrollbar Styling
 #light .messages::-webkit-scrollbar-track {
     background: $background-light;
 }

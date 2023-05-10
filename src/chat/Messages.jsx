@@ -7,7 +7,7 @@ export default function Messages (props) {
 
     const room = props.room;
     const currentUserId = props.room.scaledrone.clientId;
-    const messagesEndRef = useRef(null);
+    const messagesEndRef = useRef(null); // Ref used to scroll messages list to the latest message every time message is sent or received.
 
     const scrollToBottom = () => {
         messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
@@ -17,6 +17,7 @@ export default function Messages (props) {
         scrollToBottom();
     }, [messages]);
     
+    // Message received.
     useEffect(() => {
         room.on('message', message => {
             const messageSound = new Audio("/messageNotification.mp3");
@@ -27,6 +28,7 @@ export default function Messages (props) {
         });
     }, [room]);
     
+    // Member join and member leave notification messages.
     useEffect(() => {
         room.on('member_join', (member) => {
             const notificationId = Date.now();

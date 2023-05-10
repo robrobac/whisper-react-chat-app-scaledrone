@@ -28,9 +28,10 @@ export default function App() {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []); // End of Dinamical App component height
+    }, []);
+    // End of Dinamical App component height
 
-    // Body class is added in order to color its background based on dark or light mode because on some mobile screens a white space is shown on the bottom.
+    // Body class is added in order to color its background based on dark or light mode because on some mobile screens a white space is shown on the bottom. Something is pushing the .app background but not content
     const toggleTheme = () => {
         const body = document.getElementById('bodyElement');
         setThemeColor((current) => (current === "light" ? "dark" : "light"));

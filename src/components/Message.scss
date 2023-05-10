@@ -1,6 +1,6 @@
 @import '../helpers/variables';
 
-//  Default message styling
+// General Styling + Darkmode which is default.
 .messageItem {
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
     }
 }
 
-//  Online users styling
+//  Users styling
 .userMessage {
     align-items: start;
 
@@ -79,8 +79,7 @@
     color: $accent;
 }
 
-// LIGHT MODE
-
+// Light Mode Styling
 #light .userMessage {
     .message {
         background-color: $message-light;

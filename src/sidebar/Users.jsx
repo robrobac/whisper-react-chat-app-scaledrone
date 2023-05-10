@@ -3,13 +3,14 @@ import User from "../components/User";
 import './Users.scss'
 
 export default function Users(props) {
-  const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]);
 
-  const room = props.room;
-  const currentUserId = room.scaledrone.clientId;
-  const currentUser = users.filter((user) => user.id === currentUserId);
-  const otherUsers = users.filter((user) => user.id !== currentUserId);
+    const room = props.room;
+    const currentUserId = room.scaledrone.clientId;
+    const currentUser = users.filter((user) => user.id === currentUserId); // Current user filtered from users state.
+    const otherUsers = users.filter((user) => user.id !== currentUserId); // Other users filtered from users state, current user is excluded.
 
+    // Updating users state when member joins or leaves the chat room.
     useEffect(() => {
         room.on("members", function (members) {
             setUsers(members);

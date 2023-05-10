@@ -1,5 +1,6 @@
 @import '../helpers/variables';
 
+// General Styling + Darkmode which is default.
 .messageForm {
     display: flex;
     flex-direction: row;
@@ -39,8 +40,7 @@
     }
 }
 
-// LIGHT MODE
-
+// Light Mode Styling
 #light .messageForm {
     .messageInput {
         color: $inputText-light;
