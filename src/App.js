@@ -12,6 +12,17 @@ export default function App() {
     const [user, setUser] = useState("");
     const [themeColor, setThemeColor] = useState("dark")
 
+    useEffect(() => {
+        const storedUser = window.localStorage.getItem("user");
+        if (storedUser) {
+            setUser(JSON.parse(storedUser))
+        }
+    }, [])
+
+    useEffect(() => {
+        window.localStorage.setItem("user", JSON.stringify(user))
+    }, [user])
+
     // Dinamical App component height
     const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
