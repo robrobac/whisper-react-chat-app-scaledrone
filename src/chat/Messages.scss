@@ -41,3 +41,42 @@
 #light .messages::-webkit-scrollbar-thumb:hover {
     background: $scrollbarHover-light;
 }
+
+// Firefox Scrollbar Styling
+.messages {
+    scrollbar-width: thin;
+}
+
+.messages {
+    scrollbar-color: $scrollbar $background;
+}
+
+.messages::-moz-scrollbar-track {
+    background: $background;
+}
+
+.messages::-moz-scrollbar-thumb {
+    background: $scrollbar;
+}
+
+.messages::-moz-scrollbar-thumb:hover {
+    opacity: 0.5;
+    background: $scrollbarHover;
+}
+
+// Light mode Firefox Scrollbar Styling
+#light .messages {
+    scrollbar-color: $scrollbar-light $background-light;
+}
+
+#light .messages::-moz-scrollbar-track {
+    background: $background-light;
+}
+
+#light .messages::-moz-scrollbar-thumb {
+    background: $scrollbar-light;
+}
+
+#light .messages::-moz-scrollbar-thumb:hover {
+    background: $scrollbarHover-light;
+}
