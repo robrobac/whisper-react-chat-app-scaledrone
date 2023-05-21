@@ -1,3 +1,5 @@
+@import './helpers/variables';
+
 * {
     padding: 0;
     margin: 0;
@@ -14,4 +16,92 @@ body.light {
 
 .app {
     min-height: 100vh;
+}
+
+// General Scrollbar Styling + Darkmode which is default.
+
+.messages::-webkit-scrollbar,
+.loginScreen::-webkit-scrollbar {
+    cursor: pointer;
+    width: 5px;
+}
+
+.messages::-webkit-scrollbar-track,
+.loginScreen::-webkit-scrollbar-track {
+    background: $background;
+}
+
+.messages::-webkit-scrollbar-thumb,
+.loginScreen::-webkit-scrollbar-thumb {
+    background: $scrollbar;
+}
+
+.messages::-webkit-scrollbar-thumb:hover,
+.loginScreen::-webkit-scrollbar-thumb:hover {
+    opacity: 5;
+    background: $scrollbarHover;
+}
+
+// Light Mode Scrollbar Styling
+#light .messages::-webkit-scrollbar-track,
+#light .loginScreen::-webkit-scrollbar-track {
+    background: $background-light;
+}
+
+#light .messages::-webkit-scrollbar-thumb,
+#light .loginScreen::-webkit-scrollbar-thumb {
+    background: $scrollbar-light;
+}
+
+#light .messages::-webkit-scrollbar-thumb:hover,
+#light .loginScreen::-webkit-scrollbar-thumb:hover {
+    background: $scrollbarHover-light;
+}
+
+// Firefox Scrollbar Styling
+.messages,
+.loginScreen {
+    scrollbar-width: thin;
+}
+
+.messages,
+.loginScreen {
+    scrollbar-color: $scrollbar $background;
+}
+
+.messages::-moz-scrollbar-track,
+.loginScreen::-moz-scrollbar-track {
+    background: $background;
+}
+
+.messages::-moz-scrollbar-thumb,
+.loginScreen::-moz-scrollbar-thumb {
+    background: $scrollbar;
+}
+
+.messages::-moz-scrollbar-thumb:hover,
+.loginScreen::-moz-scrollbar-thumb:hover {
+    opacity: 0.5;
+    background: $scrollbarHover;
+}
+
+// Light mode Firefox Scrollbar Styling
+#light .messages,
+#light .loginScreen {
+    scrollbar-color: $scrollbar-light $background-light;
+}
+
+#light .messages::-moz-scrollbar-track,
+#light .loginScreen::-moz-scrollbar-track {
+    background: $background-light;
+}
+
+#light .messages::-moz-scrollbar-thumb,
+#light .loginScreen::-moz-scrollbar-thumb {
+    background: $scrollbar-light;
+}
+
+#light .messages::-moz-scrollbar-thumb:hover,
+#light .loginScreen::-moz-scrollbar-thumb:hover {
+    background: $scrollbarHover-light;
 }
